@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sari-Sari Store</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <h1>Sari-Sari Store POS</h1>
+
+    <div class="container">
+
+        <h2>Product Selection</h2>
+
+        <label for="product">Select Product:</label>
+
+        <select id="product">
+            <option value="">-- Select Product --</option>
+        </select>
+
+        <br><br>
+
+        <label for="quantity">Quantity:</label>
+
+        <input type="number" id="quantity" value="1" min="1">
+
+        <button id="add-btn">Add to Cart</button>
+
+
+        <h2>Cart</h2>
+
+        <div id="cart">
+            No items added.
+        </div>
+
+        <h3>
+            Total:
+            ₱<span id="total">0.00</span>
+        </h3>
+
+
+        <hr>
+
+
+        <h2>Checkout</h2>
+
+        <label for="customer">Customer Name:</label>
+
+        <input type="text" id="customer">
+
+        <br><br>
+
+        <label for="payment">Payment:</label>
+
+        <input type="number" id="payment">
+
+        <button id="checkout-btn">Checkout</button>
+
+        <p id="message"></p>
+
+
+        <h2>Receipt</h2>
+
+        <div id="receipt">
+            No transaction yet.
+        </div>
+
+
+        <hr>
+
+
+        <h2>Reports</h2>
+
+        <p>
+            Total Transactions:
+            <strong id="transaction-count">0</strong>
+        </p>
+
+        <p>
+            Total Sales:
+            ₱<strong id="total-sales">0.00</strong>
+        </p>
+
+        <p>
+            Most Purchased Product:
+            <strong id="most-purchased">None</strong>
+        </p>
+
+
+        <h2>Transaction Records</h2>
+
+        <table>
+
+            <thead>
+
+                <tr>
+                    <th>ID</th>
+                    <th>Date</th>
+                    <th>Customer</th>
+                    <th>Products Bought</th>
+                    <th>Total</th>
+                    <th>Paid</th>
+                    <th>Change</th>
+                </tr>
+
+            </thead>
+
+            <tbody id="transaction-table"></tbody>
+
+        </table>
+
+    </div>
+
+</body>
+
+</html>
